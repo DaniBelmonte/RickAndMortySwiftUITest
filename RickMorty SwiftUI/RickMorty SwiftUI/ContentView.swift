@@ -44,13 +44,15 @@ struct CharacterRow: View {
             Text(character.name)
                 .font(.headline)
             Spacer()
-            AsyncImage(url: URL(string: character.image), content: { image in
-                image.resizable()
-                    .frame(width: 50, height: 50)
-            },
-                       placeholder: {
-                ProgressView()
-            })
+            AsyncImage(
+                url: URL(string: character.image),
+                content: { image in
+                    image.resizable()
+                        .frame(width: 50, height: 50)
+                },
+                placeholder: {
+                    ProgressView()
+                })
         }
     }
 }
